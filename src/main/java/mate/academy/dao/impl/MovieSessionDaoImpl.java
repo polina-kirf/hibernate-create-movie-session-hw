@@ -64,7 +64,7 @@ public class MovieSessionDaoImpl implements MovieSessionDao {
                     .atStartOfDay());
             return getAvailableSessionsQuery.getResultList();
         } catch (Exception e) {
-            throw new RuntimeException("Can't find any available session", e);
+            throw new DataProcessingException("Can't find any available session", e);
         }
     }
 }
